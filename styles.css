@@ -31,3 +31,9 @@
 /* Entrada suave */
 .reveal-on .reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
 .reveal-on .reveal.in{opacity:1;transform:none}
+
+.thumbnails{flex-wrap:wrap}
+.story .reel{background:#0b0b0b;padding:18px 0}.story .reel video{max-width:520px;margin:0 auto;max-height:none;aspect-ratio:1/1}
+.story .ba{background:#0b0b0b;color:#fff;padding:34px 22px 26px;text-align:center}.ba-eyebrow{color:#f2c66a;font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:bold}.ba h3{font-family:Georgia,serif;font-weight:normal;font-size:30px;margin:8px 0 20px}.ba h3 b{color:#f2c66a}.ba-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.ba-grid img{border-radius:12px;border:1px solid #f2c66a66}.ba-grid img:last-child{grid-column:1/-1;max-width:70%;margin:0 auto}.ba-note{font-size:11px;color:#b9b1a2;margin:16px 0 0}
+@media(max-width:540px){.story .ba{padding:26px 14px 20px}.ba h3{font-size:25px}.ba-grid{gap:8px}.ba-grid img:last-child{max-width:100%}}
+@media(max-width:540px){.thumbnails{gap:6px}.thumb{width:54px;height:54px}}

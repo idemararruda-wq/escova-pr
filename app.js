@@ -1,6 +1,6 @@
 const galleryImages=window.pageData.gallery;
 const mainImage=document.getElementById('main-image');
-document.querySelectorAll('.thumb').forEach((button,index)=>button.addEventListener('click',()=>{mainImage.src=galleryImages[index].file;mainImage.width=galleryImages[index].width;mainImage.height=galleryImages[index].height;mainImage.alt=['Escova Alisadora 5 em 1 — imagem principal','Escova Alisadora 5 em 1 — detalhes do produto','Escova Alisadora 5 em 1 — apresentação do produto'][index];document.querySelectorAll('.thumb').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));}));
+document.querySelectorAll('.thumb').forEach((button,index)=>button.addEventListener('click',()=>{mainImage.src=galleryImages[index].file;mainImage.width=galleryImages[index].width;mainImage.height=galleryImages[index].height;mainImage.alt='Escova Alisadora 5 em 1 — imagem '+(index+1);document.querySelectorAll('.thumb').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));}));
 const reviews=window.pageData.reviews;
 const reviewsSection=document.getElementById('reviews');
 if(reviews&&reviews.length){reviewsSection.hidden=false;
