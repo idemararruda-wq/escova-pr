@@ -27,3 +27,7 @@
 @keyframes cta-shine{0%,35%{background-position:160% 0,0 0}80%,100%{background-position:-60% 0,0 0}}
 .sticky-buy .cta{animation:cta-shine 3.4s ease-in-out infinite}
 @media(prefers-reduced-motion:reduce){.story img.seal-anim{animation:none;transform:rotate(-4deg)}.cta,.sticky-buy .cta{animation:none}}
+
+/* Entrada suave */
+.reveal-on .reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal-on .reveal.in{opacity:1;transform:none}
