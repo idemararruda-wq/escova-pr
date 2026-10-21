@@ -16,3 +16,14 @@
 .mid-cta{padding:34px 22px;background:#faf8f3;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.mid-cta .cta{max-width:330px;margin:0 auto}.mid-cta p{font-size:12px;color:var(--muted);margin:12px 0 0}
 .sticky-buy{display:none}
 @media(max-width:1023px){body{padding-bottom:84px}.sticky-buy{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;align-items:center;gap:14px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(250,248,243,.97);backdrop-filter:blur(8px);border-top:1px solid var(--line)}.sticky-buy div{display:flex;flex-direction:column;line-height:1.1}.sticky-buy s{font-size:11px;color:var(--muted)}.sticky-buy strong{font-size:20px;font-family:Georgia,serif}.sticky-buy .cta{flex:1;min-height:48px;padding:14px 10px;animation:none;font-size:13px}.sticky-buy .cta::before{display:none}}
+
+/* Selos que balançam de leve */
+.story figure.has-seal{position:relative}
+.story img.seal-anim{position:absolute;height:auto;pointer-events:none;transform-origin:50% 50%;animation:seal-sway 4.5s ease-in-out infinite;filter:drop-shadow(0 8px 14px rgba(0,0,0,.35))}
+@keyframes seal-sway{0%,100%{transform:rotate(-9deg) scale(1)}50%{transform:rotate(7deg) scale(1.05)}}
+/* Brilho passando pelo botão */
+.cta{background:linear-gradient(110deg,rgba(255,255,255,0) 38%,rgba(255,255,255,.65) 50%,rgba(255,255,255,0) 62%),linear-gradient(120deg,#19d66b,#11bd59);background-size:260% 100%,100% 100%;background-repeat:no-repeat;background-position:160% 0,0 0;animation:cta-pulse 2.8s ease-in-out infinite,cta-shine 3.4s ease-in-out infinite}
+.cta:hover{background:linear-gradient(110deg,rgba(255,255,255,0) 38%,rgba(255,255,255,.65) 50%,rgba(255,255,255,0) 62%),linear-gradient(120deg,#35e982,#1cd56b);background-size:260% 100%,100% 100%;background-repeat:no-repeat;background-position:160% 0,0 0}
+@keyframes cta-shine{0%,35%{background-position:160% 0,0 0}80%,100%{background-position:-60% 0,0 0}}
+.sticky-buy .cta{animation:cta-shine 3.4s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.story img.seal-anim{animation:none;transform:rotate(-4deg)}.cta,.sticky-buy .cta{animation:none}}
