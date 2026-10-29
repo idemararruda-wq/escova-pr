@@ -48,3 +48,5 @@
 .doc{max-width:760px;margin:0 auto;padding:28px 22px 60px;line-height:1.7;font-size:15px}.doc h1{font-family:Georgia,serif;font-size:30px;margin:10px 0 6px;letter-spacing:-.5px}.doc h2{font-family:Georgia,serif;font-size:20px;margin:28px 0 8px}.doc p,.doc li{color:#4a443a}.doc a{color:var(--gold)}.doc .back{display:inline-block;margin-bottom:12px;font-size:13px}.doc small{color:var(--muted)}
 
 .wa-help{text-align:center;font-size:12px;margin:-8px 0 16px}.wa-help a{color:#128c4a;font-weight:700;text-decoration:underline}
+
+.story .reel{border-radius:0}
