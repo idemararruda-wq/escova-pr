@@ -50,3 +50,5 @@
 .wa-help{text-align:center;font-size:12px;margin:-8px 0 16px}.wa-help a{color:#128c4a;font-weight:700;text-decoration:underline}
 
 .story .reel{border-radius:0}
+/* Brilho suave nos botões mesmo com "reduzir animações" ativo no celular (sem pulso nem movimento de escala) */
+@media(prefers-reduced-motion:reduce){.cta,.sticky-buy .cta,.cover-badge{animation:cta-shine 3.4s ease-in-out infinite!important;transform:none!important}.cta::before{animation:none}}
