@@ -52,3 +52,42 @@
 .story .reel{border-radius:0}
 /* Brilho suave nos botões mesmo com "reduzir animações" ativo no celular (sem pulso nem movimento de escala) */
 @media(prefers-reduced-motion:reduce){.cta,.sticky-buy .cta,.cover-badge{animation:cta-shine 3.4s ease-in-out infinite!important;transform:none!important}.cta::before{animation:none}}
+
+
+/* Refinamento de conversão: layout simples, legível e leve */
+:root{--ink:#29231f;--muted:#6d675f;--gold:#a47b42;--line:#e8e1d8;--paper:#faf8f4;--green:#157a4c}
+.skip-link{position:absolute;left:12px;top:-90px;z-index:100;background:var(--ink);color:white;padding:12px;border-radius:9px}.skip-link:focus{top:12px}
+.header{justify-content:space-between;gap:16px}
+.brand-mark{font-family:Georgia,serif;font-size:23px;white-space:nowrap;letter-spacing:-.8px;text-decoration:none;color:var(--ink)}
+.brand-mark strong{color:#a47b42;font-weight:600}
+.header-note{text-align:right;line-height:1.5}
+.gallery-main{box-shadow:0 14px 36px #382a160d;border-radius:20px}
+.thumb:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.offer{box-shadow:0 18px 52px #36291817;border-color:#e9e1d8}
+.price{font-weight:600}
+.cta,.sticky-buy .cta{animation:none!important;border-radius:12px;background:#157a4c;color:#fff;box-shadow:0 8px 20px #157a4c30;transition:background .2s ease,transform .2s ease}
+.cta::before{display:none}
+.cta:hover,.sticky-buy .cta:hover{background:#0c613b;animation:none!important}
+.cta:focus-visible{outline:3px solid #a47b42;outline-offset:3px}
+.quick-highlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:28px 0 12px}
+.quick-highlight{min-width:0;padding:15px 14px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.highlight-icon{display:grid;place-items:center;width:32px;height:32px;margin-bottom:9px;background:#f7eddf;color:#987138;border-radius:9px;font-size:17px}
+.quick-highlight strong{display:block;line-height:1.4;font-size:12px}
+.quick-highlight small{display:block;margin-top:5px;font-size:11px;line-height:1.5;color:var(--muted)}
+.purchase-points{display:flex;flex-wrap:wrap;gap:6px;margin:13px 0 17px}
+.purchase-points span{padding:7px 9px;border-radius:20px;background:#f3f7f3;color:#286344;font-size:10px;line-height:1.3}
+.story .reel video{width:100%;height:auto;max-height:640px;aspect-ratio:1;object-fit:contain;background:#111}
+.faq{margin-top:24px}
+.faq-list{background:white;border:1px solid var(--line);border-radius:15px;overflow:hidden}
+.faq-list details+details{border-top:1px solid var(--line)}
+.faq-list summary{cursor:pointer;list-style:none;padding:17px 42px 17px 20px;font-size:14px;line-height:1.45;font-weight:600;position:relative}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";position:absolute;top:13px;right:18px;color:var(--gold);font-size:21px}
+.faq-list details[open] summary::after{content:"−"}
+.faq-list details p{margin:0;padding:0 20px 19px;color:var(--muted);font-size:13px;line-height:1.75}
+.faq-list a{color:#126941}
+.sticky-note{font-size:10px;color:var(--muted);line-height:1.3}
+@media(min-width:1024px){.layout{align-items:start}.offer{position:sticky;left:auto;right:auto;top:20px;width:100%;align-self:start;max-height:calc(100dvh - 40px);overflow-y:auto}}
+@media(max-width:1023px){.offer{position:static;max-height:none;overflow:visible}.quick-highlights{order:2}.description{order:3}.reviews{order:4}.faq{order:5}.closing{order:6}.bottom{order:7}.sticky-buy{box-shadow:0 -6px 30px #1c231818}}
+@media(max-width:540px){.header{height:62px}.brand-mark{font-size:20px}.header-note{font-size:8px;max-width:115px}.quick-highlights{grid-template-columns:1fr;gap:9px;margin-top:20px}.quick-highlight{display:grid;grid-template-columns:38px 1fr;grid-template-rows:auto auto;column-gap:10px;padding:12px 14px}.highlight-icon{grid-row:1/3;margin:0}.quick-highlight strong{align-self:end}.quick-highlight small{margin-top:2px}.thumbnails{flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;padding-bottom:8px}.thumbnails .thumb{flex:0 0 58px;width:58px;height:58px;scroll-snap-align:start}.sticky-buy{gap:10px}.faq-list summary{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.cta,.sticky-buy .cta,.cover-badge,.story img.seal-anim{animation:none!important;transform:none!important}.reveal-on .reveal{opacity:1!important;transform:none!important;transition:none!important}}
