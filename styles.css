@@ -52,3 +52,9 @@
 .story .reel{border-radius:0}
 /* Brilho suave nos botões mesmo com "reduzir animações" ativo no celular (sem pulso nem movimento de escala) */
 @media(prefers-reduced-motion:reduce){.cta,.sticky-buy .cta,.cover-badge{animation:cta-shine 3.4s ease-in-out infinite!important;transform:none!important}.cta::before{animation:none}}
+
+/* Black Friday 2026: campanha visual mantendo preco e checkout */
+.topbar{background:#171717;color:#f6cf78;font-weight:700;letter-spacing:1.5px;text-align:center;padding:0 8px}
+.offer-tag{background:#171717;color:#ffdd89;font-weight:800;letter-spacing:1px}
+.price-label{color:#9a7131;font-weight:800}
+@media(max-width:540px){.topbar{font-size:8px;letter-spacing:.8px}.offer-tag{font-size:8px;line-height:1.4}}
