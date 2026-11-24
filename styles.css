@@ -84,7 +84,3 @@
   .topbar-track{animation-duration:36s!important}
   .topbar-sleigh{animation:none!important}
 }
-
-/* Reposicionar texto do selo 5 niveis da imagem principal sem alterar layout */
-.gallery-main .temp-badge-fix{position:absolute;left:5.9%;top:43.7%;width:30.5%;aspect-ratio:1;pointer-events:none;z-index:2;display:block;background-image:url("selo-5-niveis-ajustado.svg?v=2");background-size:100% 100%;background-position:center;background-repeat:no-repeat}
-.gallery-main:not(.is-cover) .temp-badge-fix{display:none}
