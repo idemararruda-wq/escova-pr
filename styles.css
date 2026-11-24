@@ -58,3 +58,13 @@
 .offer-tag{background:#171717;color:#ffdd89;font-weight:800;letter-spacing:1px}
 .price-label{color:#9a7131;font-weight:800}
 @media(max-width:540px){.topbar{font-size:8px;letter-spacing:.8px}.offer-tag{font-size:8px;line-height:1.4}}
+
+/* Natal + Black Friday: somente faixa superior animada */
+.topbar{height:38px;display:flex;justify-content:flex-start;align-items:center;overflow:hidden;white-space:nowrap;background:linear-gradient(90deg,#650d18,#9b1427 48%,#650d18);color:#ffe5a0;border-bottom:1px solid #c79b49;padding:0;text-align:left;letter-spacing:0}
+.topbar-track{display:flex;align-items:center;flex:none;width:max-content;animation:christmas-marquee 24s linear infinite;will-change:transform}
+.topbar-message{display:flex;align-items:center;flex:none;padding:0 36px 0 0;font-size:11px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;line-height:1.2}
+.topbar-sleigh{font-size:20px;letter-spacing:0;display:inline-block;vertical-align:middle;padding-right:12px;animation:christmas-sleigh-bounce .6s ease-in-out infinite alternate}
+@keyframes christmas-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes christmas-sleigh-bounce{from{transform:translateY(1px)}to{transform:translateY(-2px)}}
+@media(max-width:540px){.topbar{height:34px}.topbar-message{font-size:10px;letter-spacing:.45px;padding-right:28px}.topbar-sleigh{font-size:18px;padding-right:8px}}
+@media(prefers-reduced-motion:reduce){.topbar-track,.topbar-sleigh{animation:none!important}.topbar{overflow-x:auto}.topbar-track{will-change:auto}}
