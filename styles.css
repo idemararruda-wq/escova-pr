@@ -74,3 +74,13 @@
 @media(max-width:540px){.topbar{height:27px}}
 @media(min-width:1024px) and (max-height:760px){.offer{top:117px;max-height:calc(100dvh - 130px);overflow-y:auto}}
 @media(min-width:1024px) and (max-height:580px){.offer{top:117px;max-height:calc(100dvh - 130px);overflow-y:auto}}
+
+/* Mobile: faixa de frete em movimento mesmo com reduzir movimento ativo */
+@media(max-width:1023px){
+  .topbar-track{display:flex;width:max-content;flex:none;animation:christmas-marquee 24s linear infinite!important;will-change:transform}
+  .topbar-message{flex:0 0 auto;white-space:nowrap}
+}
+@media(max-width:1023px) and (prefers-reduced-motion:reduce){
+  .topbar-track{animation-duration:36s!important}
+  .topbar-sleigh{animation:none!important}
+}
